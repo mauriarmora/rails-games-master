@@ -1,1 +1,88 @@
 // Specific CSS for your home-page
+button {
+  position: relative;
+  right: 61px;
+}
+
+input {
+  width: 400px;
+  font-weight: lighter;
+
+}
+
+.banner {
+  background-image: linear-gradient(90deg, rgba(2,0,22,0.5) 0%, rgba(0,0,0,0.365983893557423) 100%), url("https://images.unsplash.com/photo-1536743939714-23ec5ac2dbae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2874&q=80");
+  background-size: cover;
+  background-position: top;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+ h1, p, h3 {
+  color: white;
+  margin-left: 120px;
+  }
+}
+
+.banner {
+  h1 {
+    font-weight: bold;
+    font-size: 45px;
+  }
+  p {
+  }
+}
+
+.banner-info {
+  padding: 120px 0px 200px 0px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.category-card {
+  background: white;
+  padding: 14px 30px;
+  border-radius: 37px;
+  border: 2px solid #d63553;
+  color: white;
+  text-align: center;
+  color: #d63553;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+}
+
+.category-card:hover {
+  background: #d63553;
+  color: white;
+  border: 2px solid white;
+}
+
+.cards {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+}
+
+.top-games {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.top-game-card {
+  width: 500px;
+  border-radius: 20px;
+}
+
+.top-game-image {
+  border-radius: 20px 20px 0px 0px;
+}
+
+
