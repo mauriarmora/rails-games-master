@@ -41,6 +41,10 @@ input {
   padding: 100px 0px 200px 0px;
 }
 
+.top-games-title, .categories-title {
+  font-weight: bold;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
