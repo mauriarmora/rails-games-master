@@ -45,6 +45,7 @@ game_1 = Game.create!(
   description: 'Your favorite pizza loving mutant turtles are here in your hands to give you the chance to end the mission the best way possible',
   price: 36,
   category: 'Adventure',
+  location: "Raval",
   user_id: user_1.id
   )
 
@@ -53,6 +54,7 @@ game_2 = Game.create!(
   description: 'Strike from your hidden base as the Rebels - or find and destroy it as the Empire!',
   price: 50,
   category: 'Strategy',
+  location: "Ciutadella",
   user_id: user_3.id
   )
 
@@ -61,6 +63,7 @@ game_2 = Game.create!(
   description: 'Investigate the horrors of Arkham while courting cosmic doom.',
   price: 25,
   category: 'Card',
+  location: "Poble Sec",
   user_id: user_4.id
   )
 
@@ -69,6 +72,7 @@ game_2 = Game.create!(
   description: 'Fast dealing property trading game',
   price: 5,
   category: 'Strategy',
+  location: "El Born",
   user_id: user_2.id
   )
 game_5 = Game.create!(
@@ -76,6 +80,7 @@ game_5 = Game.create!(
   description: 'Trade resources with other players, build up your colony and settle the island of Catan',
   price: 8,
   category: 'Strategy',
+  location: "Gracia",
   user_id: user_4.id
   )
 
