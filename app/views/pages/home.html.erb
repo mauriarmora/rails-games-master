@@ -1,34 +1,38 @@
 <div class="container">
-  <div class="banner">
-    <div class="banner-info">
-      <h1>Become a game master</h1>
-      <p>Join board game players near you</p>
-      <p> <%= link_to "Book a game", games_path, class: "btn btn-warning btn-banner" %> </p>
+  <div class="background-color">
+    <div class="banner">
+      <div class="inner-container banner-info">
+        <h1>Become a game master</h1>
+        <p>Join board game players near you</p>
+        <p> <%= link_to "Book a game", games_path, class: "btn btn-warning btn-banner" %> </p>
+      </div>
+    </div>
+
+    <h3 class="inner-container mt-5 mb-2 top-games-title">Top rated games</h3>
+
+    <div class="top-games inner-container">
+      <div class="card top-game-card shadow">
+        <img src="https://source.unsplash.com/1600x900/?boardgame" class="card-img-top top-game-image" alt="...">
+        <div class="card-body">
+          <p class="card-text">Catan</p>
+        </div>
+      </div>
+      <div class="card top-game-card shadow">
+        <img src="https://source.unsplash.com/1600x900/?boardgame" class="card-img-top top-game-image" alt="...">
+        <div class="card-body">
+          <p class="card-text">UNO</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-container shadow">
+      <h3 class="inner-container mt-2 mb-2 categories-title">Categories</h3>
+      <div class="inner-container cards mb-5">
+        <% Game::CATEGORIES.each do |category| %>
+          <div class="category-card"><h3><%= category %></h3></div>
+        <% end %>
+      </div>
     </div>
   </div>
 
-  <h3 class="mt-5 mb-2 top-games-title">Top rated games</h3>
-
-  <div class="top-games">
-        <div class="card top-game-card shadow">
-          <img src="https://source.unsplash.com/1600x900/?boardgame" class="card-img-top top-game-image" alt="...">
-          <div class="card-body">
-            <p class="card-text">Catan</p>
-          </div>
-        </div>
-        <div class="card top-game-card shadow">
-          <img src="https://source.unsplash.com/1600x900/?boardgame" class="card-img-top top-game-image" alt="...">
-          <div class="card-body">
-            <p class="card-text">UNO</p>
-          </div>
-        </div>
-  </div>
-
-  <h3 class="mt-5 mb-2 categories-title">Categories</h3>
-
-  <div class="cards mb-5 shadow">
-    <% Game::CATEGORIES.each do |category| %>
-      <div class="category-card"><h3><%= category %></h3></div>
-    <% end %>
-  </div>
 </div>
