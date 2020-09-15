@@ -15,9 +15,16 @@ class GamesController < ApplicationController
     redirect_to games_path(@new_game)
   end
 
-  def edit; end
+  def edit
+    @edit_game = Game.find(params[:id])
+  end
 
-  def update; end
+  def update
+    update_game = Game.find(params[:id])
+    update_game.update(game_params)
+
+    redirect_to games_path(update_game)
+  end
 
   def destroy; end
 

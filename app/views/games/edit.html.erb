@@ -1,0 +1,11 @@
+<%= simple_form_for(@edit_game) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :category, collection: Game::CATEGORIES %>
+  <%= f.input :condition %>
+  <%= f.input :age %>
+  <%= f.input :number_of_players %>
+  <%= f.input :game_time %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
