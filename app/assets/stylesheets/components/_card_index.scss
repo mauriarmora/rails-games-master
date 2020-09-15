@@ -5,7 +5,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  padding: 8px;
   text-decoration: none;
   color: black;
   position: relative;
@@ -19,7 +18,6 @@
 .card-product img {
   height: 100%;
   width: 30%;
-  border-radius: 16px;
   object-fit: cover;
 }
 
