@@ -14,7 +14,7 @@
   <body>
       <div class="navbar bg-white justify-content-around">
         <div class="container">
-          <h3 class="mb-0">Board Games</h3>
+          <h3 class="mb-0"> <%= link_to "Board Games", root_path %></h3>
           <div class="search-form ">
             <%= simple_form_for :search, url: root_path, method: :get do |f| %>
             <div class="search-form-control form-group d-flex align-items-center mb-0">
