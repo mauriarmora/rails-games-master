@@ -1,0 +1,33 @@
+// input { margin-left: 0; }
+
+.special {
+  margin-left: 0px;
+  width: 100%;
+  border-radius: 9px;
+}
+
+.not-special {
+  font-weight: 400;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn {
+  width: 300px;
+  height: 50px;
+  border-radius: 9px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.form {
+  padding: 45px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  h2 { margin-bottom: 15px; }
+  p { margin-top: 27px; }
+}
