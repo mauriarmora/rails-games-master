@@ -10,9 +10,7 @@ input {
   margin-left: -57px;
 }
 
-.form-control {
-  width: 400px;
-}
+.form-control { width: 400px; }
 
 .banner {
   background-image: linear-gradient(90deg, rgba(2,0,22,0.5) 0%, rgba(0,0,0,0.365983893557423) 100%), url("https://images.unsplash.com/photo-1536743939714-23ec5ac2dbae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2874&q=80");
@@ -21,29 +19,25 @@ input {
   border-radius: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
-
- h1, p, h3 {
-  color: white;
-  margin-left: 120px;
+  h1, p, h3 {
+    color: white;
   }
 }
 
-.banner {
-  h1 {
-    font-weight: bold;
-    font-size: 45px;
-  }
-  p {
-  }
+.inner-container {
+  width: 1025px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.banner-info {
-  padding: 100px 0px 200px 0px;
-}
-
-.top-games-title, .categories-title {
+.banner h1 {
   font-weight: bold;
+  font-size: 45px;
 }
+
+.banner-info { padding: 150px 0px 150px 0px; }
+
+.top-games-title, .categories-title { font-weight: bold; }
 
 .cards {
   display: grid;
@@ -59,7 +53,6 @@ input {
   color: white;
   text-align: center;
   color: #d63553;
-
   h3 {
     font-size: 14px;
     margin-bottom: 0px;
@@ -67,21 +60,23 @@ input {
 }
 
 .category-card:hover {
-  background: #d63553;
+  background: #0298db;
   color: white;
   border: 2px solid white;
 }
 
-.cards {
+.cards-container {
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 20px;
+  padding-top: 30px;
   border-radius: 20px;
-  background: white;
+  background: #d63553;
+  margin-top: 70px;
+  .categories-title { color: white; }
 }
 
 .top-games {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .top-game-card {
@@ -89,12 +84,16 @@ input {
   border-radius: 20px;
 }
 
-.top-game-image {
-  border-radius: 20px 20px 0px 0px;
-}
+.top-game-image { border-radius: 20px 20px 0px 0px; }
 
 .btn-banner {
   border-radius: 40px;
   padding: 10px 40px;
   margin-top: 10px;
+}
+
+.background-color {
+  background-color: white;
+  margin-bottom: 50px;
+  border-radius: 20px;
 }
