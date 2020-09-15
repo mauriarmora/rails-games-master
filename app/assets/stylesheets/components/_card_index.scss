@@ -1,0 +1,41 @@
+.card-product {
+  overflow: hidden;
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.card-product:hover {
+  text-decoration: none;
+}
+
+.card-product img {
+  height: 100%;
+  width: 30%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.card-product i {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.card-price {
+  width: 20%;
+  font-weight: bolder;
+}
+
+.card-price p {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-size: 20px;
+}
