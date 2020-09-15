@@ -12,6 +12,27 @@
   </head>
 
   <body>
+      <div class="navbar bg-white justify-content-around">
+        <div class="container">
+          <h3 class="mb-0">Board Games</h3>
+          <div class="search-form ">
+            <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+            <div class="search-form-control form-group d-flex align-items-center mb-0">
+              <input class="form-control string required rounded-pill py-4 px-4" type="text" name="search[query]" id="search_query"  placeholder="Board Game" class="font-weight-lighter" />
+              <button name="button" type="submit" class="btn d-flex align-items-center ml-2">
+                <div class="icon rounded-circle">
+                  <i class="fas fa-search"></i>
+                </div>
+              </button>
+            </div>
+            <% end %>
+          </div>
+          <div class="avatar">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
+          </div>
+        </div>
+      </div>
+
     <%= yield %>
   </body>
 </html>
