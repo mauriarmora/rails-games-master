@@ -19,7 +19,7 @@
         <div class="search-form">
           <%= simple_form_for :search, url: games_path, method: :get do |f| %>
           <div class="search-form-control form-group d-flex align-items-center mb-0">
-            <input class="form-control string required rounded-pill py-4 px-4" type="text" name="search[query]" id="search_query"  placeholder="Board Game" class="font-weight-lighter" />
+            <input id="main-searchbar" class="form-control string required rounded-pill py-4 px-4" type="text" name="search[query]" id="search_query"  placeholder="Board Game" class="font-weight-lighter" />
             <button name="button" type="submit" class="home-form-btn btn d-flex align-items-center ml-2">
               <div class="icon rounded-circle">
                 <i class="fas fa-search"></i>
