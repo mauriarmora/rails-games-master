@@ -33,8 +33,13 @@
           <div class="dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, alt: "avatar" %>
             <div class="dropdown-menu dropdown-menu-right dropdown-rounded text-center py-5" aria-labelledby="navbarDropdown">
-              <%= link_to "Login", new_user_session_path, class: "btn login" %>
-              <%= link_to "Logout", destroy_user_session_path, class: "btn logout" %>
+              <% if user_signed_in? %>
+
+                <%= link_to "Logout", destroy_user_session_path, class: "btn logout", method: :delete %>
+              <% else %>
+                <%= link_to "Login", new_user_session_path, class: "btn login" %>
+                <%= link_to "Sign up", new_user_registration_path, class: "btn sign_up" %>
+              <% end %>
             </div>
           </div>
         </div>
