@@ -4,7 +4,9 @@
     <h4><i class="fas fa-map-marker-alt"> </i> <%= @game.location %></h4>
   </div>
 
-  <img class="banner-show mb-5" src="https://source.unsplash.com/featured/?game" />
+
+ <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :scale  %>
+
 
   <div class="d-flex align-items-start">
 
