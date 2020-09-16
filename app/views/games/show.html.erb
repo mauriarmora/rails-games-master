@@ -8,7 +8,7 @@
  <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :scale, class:'banner-show'  %>
 
 
-  <div class="d-flex align-items-start">
+  <div class="d-flex align-items-start mt-3 mb-3">
 
     <div class="wrapper-left">
       <div class="description-header d-flex">
@@ -29,7 +29,6 @@
         </div>
 
     </div>
-
 
       <div class="booking-card">
         <h4><strong><%= @game.price %>€</strong>/night </h4>
