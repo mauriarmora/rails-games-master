@@ -15,7 +15,8 @@
     <div class="navbar bg-white justify-content-around sticky-top">
       <div class="container">
         <h3 class="mb-0"> <%= link_to "Board Games", root_path %></h3>
-        <div class="search-form ">
+
+        <div class="search-form">
           <%= simple_form_for :search, url: root_path, method: :get do |f| %>
           <div class="search-form-control form-group d-flex align-items-center mb-0">
             <input class="form-control string required rounded-pill py-4 px-4" type="text" name="search[query]" id="search_query"  placeholder="Board Game" class="font-weight-lighter" />
@@ -29,7 +30,13 @@
           <% end %>
         </div>
         <div class="avatar d-flex">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
+          <div class="dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, alt: "avatar" %>
+            <div class="dropdown-menu dropdown-menu-right dropdown-rounded text-center py-5" aria-labelledby="navbarDropdown">
+              <%= link_to "Login", new_user_session_path, class: "btn login" %>
+              <%= link_to "Logout", destroy_user_session_path, class: "btn logout" %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -127,3 +127,24 @@ button {
     color: rgba(255, 56, 93, 1);
   }
 }
+
+.login {
+  background: #FF385D;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 40px;
+}
+
+.dropdown-rounded {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.logout {
+  color: rgba(0,0,0,0.5);
+  padding-top: 14px;
+
+  &:hover {
+    border-bottom: 1px solid black;
+  }
+}
