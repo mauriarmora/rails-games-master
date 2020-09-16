@@ -29,7 +29,7 @@
           <%= f.input :game_time, input_html: { class: 'special', placeholder: "30 mins" }, label_html: { class: 'not-special'} %>
         </div>
         <div class="col-4">
-          <%= link_to 'Add image', games_path, class: 'btn-new-game' %>
+          <%= f.input :photo, as: :file %>
         </div>
       </div>
       <%= f.input :description, input_html: { class: 'special', placeholder: '25 - 400 characters' }, label_html: { class: 'not-special'} %>
