@@ -4,50 +4,48 @@ button {
   right: 61px;
 }
 
-input {
-  width: 100%;
+.search-form {
+  width: 600px;
   font-weight: lighter;
 }
 
-.form-control {
-  width: 100%;
-}
+.form-control { width: 400px; }
 
 .banner {
   background-image: linear-gradient(90deg, rgba(2,0,22,0.5) 0%, rgba(0,0,0,0.365983893557423) 100%), url("https://images.unsplash.com/photo-1536743939714-23ec5ac2dbae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2874&q=80");
   background-size: cover;
   background-position: top;
-  border-radius: 20px;
-  margin-top: 20px;
   margin-bottom: 10px;
-
- h1, p, h3 {
-  color: white;
-  margin-left: 120px;
+  h1, p, h3 {
+    color: white;
   }
 }
 
-.banner {
-  h1 {
-    font-weight: bold;
-    font-size: 45px;
-  }
-  p {
-  }
+.inner-container {
+  width: 1025px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.banner-info {
-  padding: 100px 0px 200px 0px;
+.banner h1 {
+  font-weight: bold;
+  font-size: 45px;
 }
+
+.banner-info { padding: 150px 0px 150px 0px; }
 
 .top-games-title, .categories-title {
-  font-weight: bold;
+  font-weight: bold; }
+
+.categories-title {
+  padding: 20px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
+  padding: 20px;
 }
 
 .category-card {
@@ -58,7 +56,6 @@ input {
   color: white;
   text-align: center;
   color: #d63553;
-
   h3 {
     font-size: 14px;
     margin-bottom: 0px;
@@ -66,34 +63,88 @@ input {
 }
 
 .category-card:hover {
-  background: #d63553;
-  color: white;
+  background: white;
+  color: #d63553;
   border: 2px solid white;
+  h3 { font-weight: 700; }
 }
 
-.cards {
+.card-text {
+  font-weight: 700;
+}
+
+.card-description {
+  color: #717171;
+}
+
+.card-link {
+  font-weight: bold;
+}
+
+.cards-container {
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 20px;
   border-radius: 20px;
-  background: white;
+  background: #d63553;
+  margin-top: 70px;
+  .categories-title { color: white; }
 }
 
 .top-games {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .top-game-card {
-  width: 500px;
+  width: 31%;
   border-radius: 20px;
 }
 
-.top-game-image {
-  border-radius: 20px 20px 0px 0px;
-}
+.top-game-image { border-radius: 20px 20px 0px 0px; }
 
 .btn-banner {
   border-radius: 40px;
   padding: 10px 40px;
   margin-top: 10px;
+}
+
+.background-color {
+  background-color: white;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+
+.new-link {
+  position: relative;
+  right: -127px;
+  color: rgba(0,0,0,0.5);
+  border-radius: 4px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  color: rgba(255, 56, 93, 0.8);
+  border: 1px solid rgba(242, 241, 239, 1);
+
+  &:hover {
+    color: rgba(255, 56, 93, 1);
+  }
+}
+
+.login {
+  background: #FF385D;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 40px;
+}
+
+.dropdown-rounded {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.logout {
+  color: rgba(0,0,0,0.5);
+  padding-top: 14px;
+
+  &:hover {
+    border-bottom: 1px solid black;
+  }
 }
