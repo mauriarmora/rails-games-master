@@ -6,6 +6,8 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @bookings = @game.user.bookings
+    @booking = Booking.new
   end
 
   def new
