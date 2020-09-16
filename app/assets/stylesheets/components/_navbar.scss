@@ -21,3 +21,8 @@
   background: #FF385C;
   color: white;
 }
+
+.sign-up {
+  color: black;
+  &:hover { color: grey; }
+}
