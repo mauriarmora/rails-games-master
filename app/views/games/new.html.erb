@@ -17,7 +17,7 @@
           <%= f.input :age, input_html: { class: 'special', placeholder: "Smells like new?" }, label_html: { class: 'not-special'} %>
         </div>
         <div class="col-8">
-          <%= f.input :condition, input_html: { class: 'special', placeholder: 'Something missing?' }, label_html: { class: 'not-special'} %>
+          <%= f.input :condition, collection: Game::CONDITION, input_html: { class: 'special', placeholder: 'Something missing?' }, label_html: { class: 'not-special'} %>
         </div>
       </div>
 
