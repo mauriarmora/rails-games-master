@@ -4,4 +4,51 @@
 
 .game-details h5 {
   margin-bottom: 4px;
+  font-weight: bold;
 }
+
+.booking-card {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 16px;
+  margin-left: 16px;
+  width: 600px;
+}
+
+
+.calendar-photo {
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.booking-submit {
+  width: 100%;
+  background-color: #FF385C;
+  display: inline-block;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+.wrapper-left {
+  flex-grow: 1;
+}
+
+.btn {
+  color: white;
+  width: 100%;
+}
+
+#title-secondary {
+  font-weight: bolder;
+}
+
+#main-title-show {
+  font-weight: bolder;
+}
+
+
+
