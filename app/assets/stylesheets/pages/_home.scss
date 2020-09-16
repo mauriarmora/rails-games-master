@@ -16,8 +16,6 @@ input {
   background-image: linear-gradient(90deg, rgba(2,0,22,0.5) 0%, rgba(0,0,0,0.365983893557423) 100%), url("https://images.unsplash.com/photo-1536743939714-23ec5ac2dbae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2874&q=80");
   background-size: cover;
   background-position: top;
-  border-radius: 20px;
-  margin-top: 20px;
   margin-bottom: 10px;
   h1, p, h3 {
     color: white;
@@ -60,9 +58,10 @@ input {
 }
 
 .category-card:hover {
-  background: #0298db;
-  color: white;
+  background: white;
+  color: #d63553;
   border: 2px solid white;
+  h3 { font-weight: 700; }
 }
 
 .cards-container {
