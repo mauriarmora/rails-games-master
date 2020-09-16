@@ -144,7 +144,7 @@ game_5 = Game.create!(
   condition: 'Excellent',
   user_id: user_4.id
   )
- file = URI.open('http://s3.amazonaws.com/hopshop-image-store-production/71251681/cb10a293340578ce4aab032ff88ceb16.jpg')
+ file = URI.open('https://s3.amazonaws.com/hopshop-image-store-production/71251681/cb10a293340578ce4aab032ff88ceb16.jpg')
  game_7.photo.attach(io: file, filename: 'trivialpursuit.jpg', content_type: 'image/jpg')
 
  game_8 = Game.create!(
