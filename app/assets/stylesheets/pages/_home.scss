@@ -7,7 +7,6 @@ button {
 input {
   width: 600px;
   font-weight: lighter;
-  margin-left: -57px;
 }
 
 .form-control { width: 400px; }
@@ -96,4 +95,19 @@ input {
   background-color: white;
   margin-bottom: 50px;
   border-radius: 20px;
+}
+
+.new-link {
+  position: relative;
+  right: -127px;
+  color: rgba(0,0,0,0.5);
+  border-radius: 4px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  color: rgba(255, 56, 93, 0.8);
+  border: 1px solid rgba(242, 241, 239, 1);
+
+  &:hover {
+    color: rgba(255, 56, 93, 1);
+  }
 }
