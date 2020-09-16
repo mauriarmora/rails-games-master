@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
+
     @booking.create(booking_params)
     game = Game.find(params[:game_id])
     @booking.game = game
