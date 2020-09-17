@@ -20,6 +20,10 @@
     <% end %>
     </div>
 
-    <img id="map" src="https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png" alt="">
+    <div id="map"
+     style="width: 100%; height: 100vh;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
   </div>
 </div>
