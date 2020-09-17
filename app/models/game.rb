@@ -16,4 +16,13 @@ class Game < ApplicationRecord
   validates :description, length: { minimum: 25, maximum: 400 }
   validates :category, inclusion: { in: CATEGORIES }
   validates :condition, inclusion: { in: CONDITION }
+  validate :image_type
+
+  private
+
+  def image_type
+     unless photo.attached?
+       errors.add(:photo, "Please add an image")
+     end
+  end
 end

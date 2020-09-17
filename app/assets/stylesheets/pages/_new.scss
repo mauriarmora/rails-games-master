@@ -18,6 +18,13 @@
   height: 50px;
   border-radius: 9px;
   margin: 0 auto;
+  background-color: #d63553;
+  border: none;
+  &:hover {
+    background-color: #d63553;
+    color: black;
+    border: none;
+  }
 }
 
 .form {
