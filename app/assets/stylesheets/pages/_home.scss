@@ -53,6 +53,7 @@
     margin-bottom: 0px;
   }
   &:hover {
+    transition-duration: 0.15s;
     background: white;
     color: #d63553;
     border: 2px solid white;
@@ -98,5 +99,10 @@
   margin-top: 10px;
   width: 200px !important;
   background-color: #d63553 !important;
+  &:hover {
+    background-color: #ac2a42 !important;
+    color: white;
+    transition-duration: 0.1s !important;
+  }
 }
 
