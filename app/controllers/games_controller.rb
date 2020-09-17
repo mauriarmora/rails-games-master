@@ -13,7 +13,12 @@ class GamesController < ApplicationController
     end
 
     if params[:query].present?
-      @games = Game.where("name ILIKE ?", "%#{params[:query]}%")
+      sql_query = " \
+      games.name ILIKE :query \
+      OR games.description ILIKE :query \
+      OR games.category ILIKE :query \
+      "
+      @games = Game.where(sql_query, query: "%#{params[:query]}%")
     else
       @games = Game.all
     end
