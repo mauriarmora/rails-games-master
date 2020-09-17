@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to game_path(@game), notice: "Booking was created"
+      redirect_to game_path(@game), notice: "Your booking request was created, now just wait for it to be approved."
     else
       render "games/show"
     end
