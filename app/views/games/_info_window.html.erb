@@ -1,4 +1,7 @@
-<h3><%= game.name %></h3>
-<p><%= game.location %></p>
 
-<%= link_to "", _path %>
+<div class="popup-map">
+  <h5><%= link_to "#{game.name}", game_path(game.id) %></h5>
+  <p><%= game.location %></p>
+</div>
+
+
