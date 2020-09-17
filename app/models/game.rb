@@ -8,7 +8,7 @@ class Game < ApplicationRecord
 
 
 
-  CATEGORIES = ['Adventure', 'Card', 'Classic', 'Party', 'Trivia', 'Children', 'Strategy', 'Fantasy', 'Music', 'Puzzle', 'Collaborative', 'Role', 'Betting'].freeze
+  CATEGORIES = ['Adventure', 'Abstract', 'Betting', 'Card', 'Children', 'Classic', 'Collaborative', 'Fantasy', 'Movies/TV', 'Music', 'Party', 'Puzzle', 'Role', 'Science-Fiction', 'Strategy', 'Trivia'].freeze
   CONDITION = ['Excellent', 'Good', 'Playable'].freeze
 
   validates_presence_of :name, :description, :price, :category, :available
