@@ -4,7 +4,9 @@
     <h4><i class="fas fa-map-marker-alt"> </i> <%= @game.location %></h4>
   </div>
 
- <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :scale, class:'banner-show'  %>
+
+  <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :scale, class:'banner-show'  %>
+
 
   <div class="d-flex align-items-start mt-3 mb-5">
 
