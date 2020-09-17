@@ -32,7 +32,7 @@
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, alt: "avatar" %>
             <div class="dropdown-menu dropdown-menu-right text-center navbar-dropdown" aria-labelledby="navbarDropdown">
               <% if user_signed_in? %>
-
+                <%= link_to "Dashboard", dashboard_path, class: "btn logout" %>
                 <%= link_to "Logout", destroy_user_session_path, class: "btn logout", method: :delete %>
               <% else %>
                 <%= link_to "Login", new_user_session_path, class: "btn login" %>
