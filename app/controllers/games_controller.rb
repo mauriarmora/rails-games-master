@@ -11,6 +11,12 @@ class GamesController < ApplicationController
         image_url: helpers.asset_url('dicex.png')
       }
     end
+
+    if params[:query].present?
+      @games = Game.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @games = Game.all
+    end
   end
 
   def show

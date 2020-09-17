@@ -26,3 +26,26 @@ a:hover{
   text-decoration: none;
   color: inherit;
 }
+
+.footer {
+  height: 70px;
+  box-shadow: inset 0 2px 15px 2px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i {
+    font-size: 25px;
+    margin: 7px;
+    color: black;
+  }
+  img {
+    height: 25px;
+    margin: 7px;
+  }
+
+}
+
+.page-background {
+  min-height: 1000px;
+}
