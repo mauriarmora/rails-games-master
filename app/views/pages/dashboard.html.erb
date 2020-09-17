@@ -1,0 +1,54 @@
+<div class="container">
+  <h2 class="my-4">Dashboard</h2>
+
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active nav-active" id="pills-home-tab" data-toggle="pill" href="#pills-requests" role="tab" aria-controls="pills-home" aria-selected="true">Requests</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-bookings" role="tab" aria-controls="pills-profile" aria-selected="false">Bookings</a>
+    </li>
+  </ul>
+  <div class="tab-content nav-active" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-requests" role="tabpanel" aria-labelledby="pills-home-tab">
+
+      <!---- REQUESTED BOOKINGS (FROM OTHER USERS) ---->
+      <div class="notifications">
+        <% @requested_bookings.each do |booking| %>
+          <div class="notification">
+            <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+              <div class="notification-content">
+                    <%= booking.user.first_name %> <%= booking.user.last_name %>
+                    <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
+                    <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
+              </div>
+              <div class="notification-actions">
+                  <%= link_to '<i class="fas fa-check-circle"></i> Accept'.html_safe, games_path %>
+                  <%= link_to '<i class="fas fa-minus-circle"></i> Decline'.html_safe, games_path %>
+              </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!---- USER BOOKINGS ---->
+    <div class="tab-pane fade" id="pills-bookings" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <div class="notifications">
+        <% @bookings.each do |booking| %>
+          <div class="notification">
+            <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+              <div class="notification-content">
+                    <%= booking.user.first_name %> <%= booking.user.last_name %>
+                    <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
+                    <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
+              </div>
+              <div class="notification-actions">
+                  status
+              </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,7 +1,7 @@
 class Game < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
-
+  has_many :bookings
   CATEGORIES = ['Adventure', 'Card', 'Classic', 'Party', 'Trivia', 'Children', 'Strategy', 'Fantasy', 'Music', 'Puzzle', 'Collaborative', 'Role', 'Betting'].freeze
   CONDITION = ['Excellent', 'Good', 'Playable'].freeze
 
