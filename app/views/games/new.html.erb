@@ -33,6 +33,7 @@
             <%= f.input :photo, as: :file %>
           </div>
         </div>
+        <%= f.input :location, input_html: { class: 'special', placeholder: "Carrer d'en Grassot, 101, 08025 Barcelona" }, label_html: { class: 'not-special'} %>
         <%= f.input :description, input_html: { class: 'special', placeholder: '25 - 400 characters' }, label_html: { class: 'not-special'} %>
         <%= f.submit class: 'submit-btn btn' %>
       <% end %>
