@@ -7,13 +7,20 @@
   font-weight: bold;
 }
 
+.banner-show {
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
 .booking-card {
   background-color: white;
   border-radius: 20px;
   border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 16px;
   margin-left: 16px;
   width: 600px;
+  position: sticky;
+  top: 86px;
   &:hover { shadow: none !important;}
 }
 
@@ -39,6 +46,10 @@
 
 .wrapper-left {
   flex-grow: 1;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0px;
 }
 
 .btn {

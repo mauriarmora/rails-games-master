@@ -10,14 +10,14 @@
 
   <div class="d-flex align-items-start mt-3 mb-5">
 
-    <div class="wrapper-left">
+    <div class="wrapper-left p-3">
       <div class="description-header d-flex">
           <h5 id="title-secondary" class="mr-3"><%= @game.name %></h5>
            <div class="avatar">
            <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
            </div>
       </div>
-        <div class="game-details">
+        <div class="game-details p-3 mb-5">
           <p><strong>Category:</strong> <%= @game.category %></p>
           <p><strong>Age:</strong>  from <%= @game.age %> years-old.</p>
           <p><strong>Players:</strong>  <%= @game.number_of_players %></p>
@@ -27,6 +27,10 @@
           <p><strong>Description:</strong>  <%= @game.description %></p>
 
         </div>
+        <div class="pl-0 pr-0" id="map"
+          style="width: 100%; height: 500px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
     </div>
 
@@ -46,10 +50,6 @@
         <% end %>
       </div>
   </div> <!---- closing flex div ------>
-  <div id="map"
-    style="width: 100%; height: 400px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 </div> <!---- closing container ------>
 
