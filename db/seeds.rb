@@ -1,9 +1,8 @@
-
 require "open-uri"
 
 puts "Destroying  my data"
-User.destroy_all
 Game.destroy_all
+User.destroy_all
 
 puts "Creating new ones"
 
@@ -34,6 +33,8 @@ user_4 = User.create!(
   email: "gabbyb@fiorentina.com",
   password: '123456'
   )
+
+puts "4 users created!"
 
 game_1 = Game.new(
   name: 'Teenage Mutant Ninja Turtles: Shadows of The Past Board Game',
@@ -100,6 +101,8 @@ file = URI.open('https://images-na.ssl-images-amazon.com/images/I/51PWFJk7aJL._A
 game_4.photo.attach(io: file, filename: 'monopoly.jpg', content_type: 'image/jpg')
 game_4.save!
 
+puts "4 games created!"
+
 game_5 = Game.new(
   name: 'Catan',
   description: 'Trade resources with other players, build up your colony and settle the island of Catan',
@@ -147,6 +150,8 @@ game_7 = Game.new(
 file = URI.open('https://s3.amazonaws.com/hopshop-image-store-production/71251681/cb10a293340578ce4aab032ff88ceb16.jpg')
 game_7.photo.attach(io: file, filename: 'trivialpursuit.jpg', content_type: 'image/jpg')
 game_7.save!
+
+puts "7 games created!"
 
 game_8 = Game.new(
   name: 'Risk',
