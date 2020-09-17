@@ -18,13 +18,29 @@
           <div class="notification">
             <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
               <div class="notification-content">
-                    <%= booking.user.first_name %> <%= booking.user.last_name %>
+                <h6 class="mb-1"><strong><%= booking.game.name %></strong></h6>
+                    <p><small class="user-request"><strong>Request from:</strong> <%= booking.user.first_name %> <%= booking.user.last_name %></p></small>
                     <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
                     <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
               </div>
-              <div class="notification-actions">
-                  <%= link_to '<i class="fas fa-check-circle"></i> Accept'.html_safe, games_path %>
-                  <%= link_to '<i class="fas fa-minus-circle"></i> Decline'.html_safe, games_path %>
+              <div class="notification-actions justify-content-center align-items-center">
+                <div class="booking-status d-flex">
+                  <% if booking.status == "pending" %>
+                    <%= link_to booking_accept_path(booking), class: "d-flex align-items-center" do  %>
+                      <i class="fas fa-check-circle"></i>
+                      <p class="mr-4 ml-1 accept">Accept</p>
+                    <% end %>
+
+                    <%= link_to booking_decline_path(booking), class: "d-flex align-items-center" do %>
+                    <i class="fas fa-minus-circle"></i>
+                    <p class="mr-4 ml-1 decline">Decline</p>
+                    <% end %>
+                  <% else %>
+                    <p><%= booking.status.capitalize %></p>
+
+                  <% end %>
+                </div>
+
               </div>
           </div>
         <% end %>
@@ -38,12 +54,23 @@
           <div class="notification">
             <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
               <div class="notification-content">
-                    <%= booking.user.first_name %> <%= booking.user.last_name %>
+                <h6 class="mb-1"><strong><%= booking.game.name %></strong></h6>
                     <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
                     <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
               </div>
-              <div class="notification-actions">
-                  status
+
+              <div class="notification-actions align-items-center">
+                <% if booking.status == "accepted" %>
+                  <i class="fas fa-check-circle text-success"></i>
+                  <p class="ml-1 text-success"> <%= booking.status.capitalize %>!</p>
+
+                <% elsif booking.status == "declined" %>
+                  <i class="fas fa-minus-circle text-danger"></i>
+                  <p class="ml-1 text-danger"><%= booking.status.capitalize %></p>
+                <% else %>
+                <i class="fas fa-clock mr-1 pending-status"></i>
+                <p class="pending-status"><%= booking.status.capitalize %></p>
+                <% end %>
               </div>
           </div>
         <% end %>
