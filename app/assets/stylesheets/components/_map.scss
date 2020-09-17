@@ -16,4 +16,12 @@
   top: 61px;
   height: 92vh !important;
   width: 1220px !important;
+
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.mapboxgl-marker {
+  filter: invert(28%) sepia(13%) saturate(6800%) hue-rotate(317deg) brightness(110%) contrast(100%);
+
 }
