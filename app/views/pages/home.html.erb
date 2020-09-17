@@ -12,28 +12,37 @@
 
   <h3 class="mt-5 mb-2 top-games-title">Top rated games</h3>
 
-  <div class="top-games">
-    <div class="card top-game-card shadow">
-      <img src="https://cdn2.vox-cdn.com/thumbor/iDTxFKjgvgbS7ZLn4NThB1-6HRw=/0x0:1280x720/1280x720/cdn0.vox-cdn.com/uploads/chorus_image/image/45728350/catan.0.0.jpg" class="card-img-top top-game-image" alt="...">
-      <div class="card-body">
-        <p class="card-text">#1 Catan</p>
-        <p class="card-description">Our community loves Catan! <%= link_to "Join a player near you", games_path, class: "card-link" %></p>
+  <div class="top-games row">
+    <div class="col-xs-10 col-md-4">
+      <div class="card top-game-card shadow">
+        <img src="https://cdn2.vox-cdn.com/thumbor/iDTxFKjgvgbS7ZLn4NThB1-6HRw=/0x0:1280x720/1280x720/cdn0.vox-cdn.com/uploads/chorus_image/image/45728350/catan.0.0.jpg" class="card-img-top top-game-image" alt="...">
+        <div class="card-body">
+          <p class="card-text">#1 Catan</p>
+          <p class="card-description">Our community loves Catan! <%= link_to "Join a player near you", games_path, class: "card-link" %></p>
+        </div>
       </div>
     </div>
-    <div class="card top-game-card shadow">
-      <img src="https://c2.staticflickr.com/4/3653/3356449350_03153b7d03_b.jpg" class="card-img-top top-game-image" alt="...">
-      <div class="card-body">
-        <p class="card-text">#2 Trivial</p>
-        <p class="card-description">Our community loves Trivial! <%= link_to "Join a player near you!", games_path, class: "card-link" %></p>
+
+    <div class="col-xs-10 col-md-4">
+      <div class="card top-game-card shadow">
+        <img src="https://c2.staticflickr.com/4/3653/3356449350_03153b7d03_b.jpg" class="card-img-top top-game-image" alt="...">
+        <div class="card-body">
+          <p class="card-text">#2 Trivial</p>
+          <p class="card-description">Our community loves Trivial! <%= link_to "Join a player near you!", games_path, class: "card-link" %></p>
+        </div>
       </div>
     </div>
-    <div class="card top-game-card shadow">
-      <img src="https://ubistatic19-a.akamaihd.net/ubicomstatic/es-mx/global/search-thumbnail/global_search_thumbnail_image_750x422_mobile_259517.jpg" class="card-img-top top-game-image" alt="...">
-      <div class="card-body">
-        <p class="card-text">#3 UNO</p>
-        <p class="card-description">Our community loves UNO! <%= link_to "Join a player near you!", games_path, class: "card-link" %></p>
+
+    <div class="col-xs-10 col-md-4">
+      <div class="card top-game-card shadow">
+        <img src="https://ubistatic19-a.akamaihd.net/ubicomstatic/es-mx/global/search-thumbnail/global_search_thumbnail_image_750x422_mobile_259517.jpg" class="card-img-top top-game-image" alt="...">
+        <div class="card-body">
+          <p class="card-text">#3 UNO</p>
+          <p class="card-description">Our community loves UNO! <%= link_to "Join a player near you!", games_path, class: "card-link" %></p>
+        </div>
       </div>
     </div>
+
   </div>
 
   <div class="cards-container shadow">
