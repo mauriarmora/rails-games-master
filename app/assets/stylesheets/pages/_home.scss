@@ -42,12 +42,20 @@
   padding: 20px;
 }
 
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
   padding: 20px;
 
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .category-card {
@@ -97,7 +105,7 @@
 }
 
 .top-game-card {
-  width: 31%;
+  margin-bottom: 5px;
   border-radius: 20px;
 }
 
