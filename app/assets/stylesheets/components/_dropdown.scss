@@ -1,0 +1,22 @@
+.logout {
+  color: rgba(0,0,0,0.8) !important;
+  padding-top: 14px;
+  &:hover { border-bottom: 1px solid black; }
+}
+
+.navbar-dropdown {
+  border-radius: 7px;
+  padding: 30px;
+}
+
+.login {
+  background: #FF385D;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 40px;
+}
+
+.sign-up {
+  color: rgba(0,0,0,0.8) !important;
+  &:hover { border-bottom: 1px solid black; }
+}

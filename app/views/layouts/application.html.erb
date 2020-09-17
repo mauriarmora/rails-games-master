@@ -12,26 +12,25 @@
   </head>
 
   <body>
-    <div class="navbar bg-white justify-content-around sticky-top">
+
+    <div class="navbar bg-white d-flex justify-content-between  sticky-top">
       <div class="container">
-        <h3 class="mb-0"> <%= link_to "Board Games", root_path %></h3>
+        <h3 class="mb-0"> <%= link_to "G|M", root_path %></h3>
 
         <div class="search-form">
-          <%= simple_form_for :search, url: games_path, method: :get do |f| %>
-          <div class="search-form-control form-group d-flex align-items-center mb-0">
-            <input id="main-searchbar" class="form-control string required rounded-pill py-4 px-4" type="text" name="search[query]" id="search_query"  placeholder="Board Game" class="font-weight-lighter" />
-            <button name="button" type="submit" class="home-form-btn btn d-flex align-items-center ml-2">
-              <div class="icon rounded-circle">
+          <%= form_tag games_path, method: :get, class:'d-flex justify-content-center align-items-center' do %>
+              <%= text_field_tag :query, params[:query], class: "form-input", placeholder: "Search a game" %>
+              <button type="submit" class="btn-form">
                 <i class="fas fa-search"></i>
-              </div>
-            </button>
-          </div>
+              </button>
+              <%#= submit_tag '.html_safe, class: "btn-form" %>
           <% end %>
         </div>
-        <div class="avatar d-flex">
+
+        <div class="avatar">
           <div class="dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, alt: "avatar" %>
-            <div class="dropdown-menu dropdown-menu-right dropdown-rounded text-center py-4 px-4" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-right text-center navbar-dropdown" aria-labelledby="navbarDropdown">
               <% if user_signed_in? %>
 
                 <%= link_to "Logout", destroy_user_session_path, class: "btn logout", method: :delete %>
