@@ -1,8 +1,31 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  width: 300px;
+  border-radius: 60px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+}
+
+
+#map {
+  position: sticky;
+
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+
+.mapboxgl-marker {
+  filter: invert(28%) sepia(13%) saturate(6800%) hue-rotate(317deg) brightness(110%) contrast(100%);
+
+}
+
+.index-map{
+  top: 61px;
+  height: 92vh !important;
+ // width: 1220px !important;
+}
+.show-map{
+  border-radius: 0px 0px 20px 20px;
 }

@@ -6,15 +6,30 @@ class GamesController < ApplicationController
     @markers = @games.geocoded.map do |game|
       {
         lat: game.latitude,
-        lng: game.longitude
-
-
+        lng: game.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { game: game }),
+        image_url: helpers.asset_url('dicex.png')
       }
+    end
+
+    if params[:query].present?
+      @games = Game.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @games = Game.all
     end
   end
 
   def show
     @game = Game.find(params[:id])
+    @markers = [
+      {
+        lat: @game.latitude,
+        lng: @game.longitude,
+        infoWindow: "<div> </div>",
+        image_url: helpers.asset_url('dicex.png')
+      }
+    ]
+
     @bookings = @game.user.bookings
     @booking = Booking.new
   end
@@ -57,4 +72,5 @@ class GamesController < ApplicationController
   def game_params
     params.require(:game).permit(:name, :description, :price, :category, :condition, :age, :number_of_players, :game_time, :photo)
   end
+
 end
