@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   resources :games do
     resources :bookings, only: [:new, :create]
   end
+
+  resources :bookings do
+    get 'accept', to: 'bookings#accept'
+    get 'decline', to: 'bookings#decline'
+  end
 end
