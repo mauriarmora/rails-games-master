@@ -1,16 +1,4 @@
 // Specific CSS for your home-page
-.home-form-btn {
-  position: relative;
-  right: 61px;
-  width: 25px !important;
-}
-
-.search-form {
-  width: 600px;
-  font-weight: lighter;
-}
-
-#main-searchbar { width: 450px; }
 
 .banner {
   background-image: linear-gradient(90deg, rgba(2,0,22,0.5) 0%, rgba(0,0,0,0.365983893557423) 100%), url("https://images.unsplash.com/photo-1536743939714-23ec5ac2dbae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2874&q=80");
@@ -38,17 +26,11 @@
 .top-games-title, .categories-title {
   font-weight: bold; }
 
-.categories-title {
-  padding: 20px;
-}
-
-
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
   padding: 20px;
-
 }
 
 @media (max-width: 720px) {
@@ -70,26 +52,22 @@
     font-size: 14px;
     margin-bottom: 0px;
   }
-}
-
-.category-card:hover {
-  background: white;
-  color: #d63553;
-  border: 2px solid white;
-  h3 { font-weight: 700; }
+  &:hover {
+    background: white;
+    color: #d63553;
+    border: 2px solid white;
+    h3 { font-weight: 700; }
+  }
 }
 
 .card-text {
   font-weight: 700;
+  font-size: 20px;
 }
 
-.card-description {
-  color: #717171;
-}
+.card-description { color: #717171; }
 
-.card-link {
-  font-weight: bold;
-}
+.card-link { font-weight: bold; }
 
 .cards-container {
   border: 1px solid rgba(0,0,0,0.1);
@@ -119,48 +97,6 @@
   padding: 10px 40px;
   margin-top: 10px;
   width: 200px !important;
-}
-
-.background-color {
-  background-color: white;
-  margin-bottom: 50px;
-  border-radius: 20px;
-}
-
-.new-link {
-  position: relative;
-  right: -120px;
-  color: rgba(0,0,0,0.5);
-  border-radius: 4px;
-  padding: 10px 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-  color: rgba(255, 56, 93, 0.8);
-  border: 1px solid rgba(242, 241, 239, 1);
-  width: 210px;
-  text-align: center;
-  &:hover {
-    color: rgba(255, 56, 93, 1);
-  }
-}
-
-.login {
-  background: #FF385D;
-  color: white;
-  border-radius: 20px;
-  padding: 10px 40px;
-}
-
-.dropdown-rounded {
-  border-radius: 20px;
-  padding: 10px;
-}
-
-.logout {
-  color: rgba(0,0,0,0.5);
-  padding-top: 14px;
-
-  &:hover {
-    border-bottom: 1px solid black;
-  }
+  background-color: #d63553 !important;
 }
 

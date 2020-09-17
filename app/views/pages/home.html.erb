@@ -3,12 +3,12 @@
     <div class="banner-info">
       <h1>Become a game master</h1>
       <p>Join board game players near you</p>
-      <p> <%= link_to "Post a game", new_game_path, class: "btn btn-warning btn-banner" %> </p>
+      <p> <%= link_to "Post a game", new_game_path, class: "btn btn-banner" %> </p>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container mb-5">
 
   <h3 class="mt-5 mb-2 top-games-title">Top rated games</h3>
 
@@ -35,7 +35,7 @@
 
     <div class="col-xs-10 col-md-4">
       <div class="card top-game-card shadow">
-        <img src="https://i.ytimg.com/vi/w8c8GJPYtbU/maxresdefault.jpg" class="card-img-top top-game-image" alt="...">
+        <img src="https://ubistatic19-a.akamaihd.net/ubicomstatic/es-mx/global/search-thumbnail/global_search_thumbnail_image_750x422_mobile_259517.jpg" class="card-img-top top-game-image" alt="...">
         <div class="card-body">
           <p class="card-text">#3 UNO</p>
           <p class="card-description">Our community loves UNO! <%= link_to "Join a player near you!", games_path, class: "card-link" %></p>
@@ -46,8 +46,8 @@
   </div>
 
   <div class="cards-container shadow">
-    <h3 class=" mt-2 mb-2 categories-title">Categories</h3>
-    <div class="cards mb-5">
+    <h3 class=" mt-5 ml-4 pl-4 categories-title">Categories</h3>
+    <div class="cards mb-4 mx-4">
       <% Game::CATEGORIES.each do |category| %>
         <div class="category-card"><h3><%= category %></h3></div>
       <% end %>
