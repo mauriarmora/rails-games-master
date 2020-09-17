@@ -1,29 +1,30 @@
 <div class="page-background">
   <div class="wrapper d-flex">
-    <div class="wrapper ml-3">
-    <h1 class="mb-4 mt-4">Board games in Barcelona</h1>
+    <div class="card-wrapper ml-3">
+      <h1 class="mb-4 mt-4">Board games in Barcelona</h1>
 
-    <% @games.each do |game| %>
-      <%= link_to game_path(game.id) do %>
-        <div class="card-product mb-3 mr-3">
-         <%= cl_image_tag game.photo.key, height: 300, width: 400, crop: :scale %>
-          <div class="card-product-infos ml-3">
-            <h4><%= game.name %></h4>
-            <p class="game-description mb-0"><%= game.description %></p>
+      <% @games.each do |game| %>
+        <%= link_to game_path(game.id) do %>
+          <div class="card-product mb-3 mr-3">
+           <%= cl_image_tag game.photo.key, height: 300, width: 400, crop: :scale %>
+            <div class="card-product-infos ml-3">
+              <h4><%= game.name %></h4>
+              <p class="game-description mb-0"><%= game.description %></p>
+            </div>
+            <div class="card-price">
+              <i class="far fa-heart"></i>
+              <p><%= game.price %>€</p>
+            </div>
           </div>
-          <div class="card-price">
-            <i class="far fa-heart"></i>
-            <p><%= game.price %>€</p>
-          </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
     </div>
-
     <div id="map"
-     style="width: 100%; height: 100vh;"
+     style="width: 40vw; height: 100vh;"
      data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+     class="index-map"></div>
+
 
   </div>
 </div>
