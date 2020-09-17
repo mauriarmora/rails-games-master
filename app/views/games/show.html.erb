@@ -1,53 +1,53 @@
-<div class="container">
-  <div class="mt-4">
-    <h1 id="main-title-show"><%= @game.name %></h1>
-    <h4><i class="fas fa-map-marker-alt"> </i> <%= @game.location %></h4>
-  </div>
-
- <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :scale, class:'banner-show'  %>
-
-  <div class="d-flex align-items-start mt-3 mb-5">
-
-    <div class="wrapper-left">
-      <div class="description-header d-flex">
-          <h5 id="title-secondary" class="mr-3"><%= @game.name %></h5>
-           <div class="avatar">
-           <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
-           </div>
-      </div>
-        <div class="game-details">
-          <p><strong>Category:</strong> <%= @game.category %></p>
-          <p><strong>Age:</strong>  from <%= @game.age %> years-old.</p>
-          <p><strong>Players:</strong>  <%= @game.number_of_players %></p>
-          <p><strong>Duration:</strong>  <%= @game.game_time %></p>
-          <p><strong>Condition:</strong>  <%= @game.condition %></p>
-          <br />
-          <p><strong>Description:</strong>  <%= @game.description %></p>
-
-        </div>
-
+<div class="page-background">
+  <div class="container">
+    <div class="mt-4">
+      <h1 id="main-title-show"><%= @game.name %></h1>
+      <h4><i class="fas fa-map-marker-alt"> </i> <%= @game.location %></h4>
     </div>
 
-      <div class="booking-card">
-        <h4><strong><%= @game.price %>€</strong>/night </h4>
+    <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :scale, class:'banner-show'  %>
 
-        <%= simple_form_for([@game, @booking]) do |f| %>
-          <%= f.error_notification %>
-          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="d-flex align-items-start mt-3 mb-5">
 
-            <%= f.input :start_date, as: :string, required: true, input_html: {id: "range_start", class: ""} %>
-            <%= f.input :end_date, as: :string, required: true, input_html: {id: "range_end", class: ""} %>
+      <div class="wrapper-left">
+        <div class="description-header d-flex">
+            <h5 id="title-secondary" class="mr-3"><%= @game.name %></h5>
+             <div class="avatar">
+             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
+             </div>
+        </div>
+          <div class="game-details">
+            <p><strong>Category:</strong> <%= @game.category %></p>
+            <p><strong>Age:</strong>  from <%= @game.age %> years-old.</p>
+            <p><strong>Players:</strong>  <%= @game.number_of_players %></p>
+            <p><strong>Duration:</strong>  <%= @game.game_time %></p>
+            <p><strong>Condition:</strong>  <%= @game.condition %></p>
+            <br />
+            <p><strong>Description:</strong>  <%= @game.description %></p>
 
-          <div class="booking-submit">
-            <%= f.button :submit%>
           </div>
-        <% end %>
+
       </div>
-  </div> <!---- closing flex div ------>
-  <div id="map"
-    style="width: 100%; height: 400px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-</div> <!---- closing container ------>
+        <div class="booking-card">
+          <h4><strong><%= @game.price %>€</strong>/night </h4>
 
+          <%= simple_form_for([@game, @booking]) do |f| %>
+            <%= f.error_notification %>
+            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+              <%= f.input :start_date, as: :string, required: true, input_html: {id: "range_start", class: ""} %>
+              <%= f.input :end_date, as: :string, required: true, input_html: {id: "range_end", class: ""} %>
+
+            <div class="booking-submit">
+              <%= f.button :submit%>
+            </div>
+          <% end %>
+        </div>
+    </div>
+    <div id="map"
+      style="width: 100%; height: 400px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+</div>

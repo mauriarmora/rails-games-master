@@ -1,39 +1,41 @@
-<div class="form-container">
-  <div class="form shadow">
-    <h2>Add a new game</h2>
-    <%= simple_form_for(@new_game) do |f| %>
-      <%= f.input :name, input_html: { class: 'special', placeholder: 'Jumanji' }, label_html: { class: 'not-special'} %>
-      <div class="row">
-        <div class="col-4">
-          <%= f.input :price, input_html: { class: 'special', placeholder: "Don't go too high!" }, label_html: { class: 'not-special'} %>
+<div class="page-background">
+  <div class="form-container">
+    <div class="form shadow">
+      <h2>Add a new game</h2>
+      <%= simple_form_for(@new_game) do |f| %>
+        <%= f.input :name, input_html: { class: 'special', placeholder: 'Jumanji' }, label_html: { class: 'not-special'} %>
+        <div class="row">
+          <div class="col-4">
+            <%= f.input :price, input_html: { class: 'special', placeholder: "Don't go too high!" }, label_html: { class: 'not-special'} %>
+          </div>
+          <div class="col-8">
+            <%= f.input :category, collection: Game::CATEGORIES, input_html: { class: 'special' }, label_html: { class: 'not-special' } %>
+          </div>
         </div>
-        <div class="col-8">
-          <%= f.input :category, collection: Game::CATEGORIES, input_html: { class: 'special' }, label_html: { class: 'not-special' } %>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-4">
-          <%= f.input :age, input_html: { class: 'special', placeholder: "Smells like new?" }, label_html: { class: 'not-special'} %>
+        <div class="row">
+          <div class="col-4">
+            <%= f.input :age, input_html: { class: 'special', placeholder: "Smells like new?" }, label_html: { class: 'not-special'} %>
+          </div>
+          <div class="col-8">
+            <%= f.input :condition, collection: Game::CONDITION, input_html: { class: 'special', placeholder: 'Something missing?' }, label_html: { class: 'not-special'} %>
+          </div>
         </div>
-        <div class="col-8">
-          <%= f.input :condition, collection: Game::CONDITION, input_html: { class: 'special', placeholder: 'Something missing?' }, label_html: { class: 'not-special'} %>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-4">
-          <%= f.input :number_of_players, input_html: { class: 'special', placeholder: '1 - 7.000.000.000' }, label_html: { class: 'not-special'} %>
+        <div class="row">
+          <div class="col-4">
+            <%= f.input :number_of_players, input_html: { class: 'special', placeholder: '1 - 7.000.000.000' }, label_html: { class: 'not-special'} %>
+          </div>
+          <div class="col-4">
+            <%= f.input :game_time, input_html: { class: 'special', placeholder: "30 mins" }, label_html: { class: 'not-special'} %>
+          </div>
+          <div class="col-4">
+            <%= f.input :photo, as: :file %>
+          </div>
         </div>
-        <div class="col-4">
-          <%= f.input :game_time, input_html: { class: 'special', placeholder: "30 mins" }, label_html: { class: 'not-special'} %>
-        </div>
-        <div class="col-4">
-          <%= f.input :photo, as: :file %>
-        </div>
-      </div>
-      <%= f.input :description, input_html: { class: 'special', placeholder: '25 - 400 characters' }, label_html: { class: 'not-special'} %>
-      <%= f.submit class: 'submit-btn btn' %>
-    <% end %>
+        <%= f.input :description, input_html: { class: 'special', placeholder: '25 - 400 characters' }, label_html: { class: 'not-special'} %>
+        <%= f.submit class: 'submit-btn btn' %>
+      <% end %>
+    </div>
   </div>
 </div>
