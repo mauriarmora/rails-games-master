@@ -52,12 +52,12 @@
             <div class="notification">
               <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
               <div class="notification-content">
-                <h6 class="mb-1"><strong><%= booking.game.name %></strong></h6>
+                <h6 class="mb-1"><strong><%= link_to booking.game.name, game_path(booking.game.id) %></strong></h6>
                 <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
                 <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
               </div>
 
-              <div class="notification-actions align-items-center">
+              <div class="notification-actions-bookings align-items-center">
                 <% if booking.status == "accepted" %>
                   <i class="fas fa-check-circle text-success"></i>
                   <p class="ml-1 text-success"> <%= booking.status.capitalize %>!</p>
