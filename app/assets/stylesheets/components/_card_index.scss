@@ -11,9 +11,7 @@
   border-radius: 20px;
 }
 
-.card-product:hover {
-  text-decoration: none;
-}
+.card-product:hover { text-decoration: none; }
 
 .card-product img {
   height: 100%;
@@ -27,9 +25,7 @@
   right: 16px;
 }
 
-.card-product i:hover {
-  color: #d63553;
-}
+.card-product i:hover { color: #d63553; }
 
 .card-product h4 {
   font-size: 20px;
@@ -37,9 +33,7 @@
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.game-description {
-  color: rgba(0,0,0,0.5);
-}
+.game-description { color: rgba(0,0,0,0.5); }
 
 .card-price {
   width: 20%;
@@ -53,6 +47,50 @@
   font-size: 20px;
 }
 
-.card-wrapper {
-  width: 60vw;
+.wrapper { display: flex; }
+
+.card-wrapper { width: 60vw; }
+
+@media (max-width: 970px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .card-wrapper {
+    width: 97vw;
+  }
+  #map { display: none; }
 }
+
+@media (max-width: 650px) {
+  .card-product {
+    height: 180px;
+  }
+}
+
+@media (max-width: 550px) {
+  .card-product { height: 150px;}
+}
+
+@media (max-width: 380px) {
+  .card-product {
+    height: 100px;
+    p { display: none;}
+    h4 {
+      font-size: 18px;
+      border-bottom: none;
+    }
+  }
+  .card-product { align-items: center; }
+}
+
+
+
+
+
+
+
+
+
+
+

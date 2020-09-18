@@ -1,7 +1,8 @@
 <div class="page-background">
-  <div class="wrapper d-flex">
+  <div class="wrapper">
     <div class="card-wrapper ml-3">
-      <h1 class="mb-4 mt-4">Board games in Barcelona</h1>
+      <h1 class="mb-0 mt-4">Board games in Barcelona</h1>
+      <p class="mb-4 text-secondary">(<%= @games.count %> results)</p>
 
       <% @games.each do |game| %>
         <%= link_to game_path(game.id) do %>
@@ -20,11 +21,10 @@
       <% end %>
     </div>
     <div id="map"
-     style="width: 40vw; height: 100vh;"
+     style="width: 40vw; height: 93vh;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
      class="index-map"></div>
-
 
   </div>
 </div>
