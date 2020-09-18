@@ -2,16 +2,6 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @games = Game.all
-    @markers = @games.geocoded.map do |game|
-      {
-        lat: game.latitude,
-        lng: game.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { game: game }),
-        image_url: helpers.asset_url('dicex.png')
-      }
-    end
-
     if params[:query].present?
       sql_query = " \
       games.name ILIKE :query \
@@ -22,6 +12,15 @@ class GamesController < ApplicationController
     else
       @games = Game.all
     end
+
+    @markers = @games.geocoded.map do |game|
+      {
+        lat: game.latitude,
+        lng: game.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { game: game }),
+        image_url: helpers.asset_url('dicex.png')
+      }
+    end
   end
 
   def show
@@ -30,7 +29,7 @@ class GamesController < ApplicationController
       {
         lat: @game.latitude,
         lng: @game.longitude,
-        infoWindow: "<div> </div>",
+        infoWindow: render_to_string(partial: "info_window", locals: { game: @game }),
         image_url: helpers.asset_url('dicex.png')
       }
     ]
