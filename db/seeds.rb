@@ -37,7 +37,7 @@ user_4 = User.create!(
 puts "4 users created!"
 
 game_1 = Game.new(
-  name: 'Teenage Mutant Ninja Turtles: Shadows of The Past Board Game',
+  name: 'Teenage Mutant Ninja Turtles: Board Game',
   description: 'Your favorite pizza loving mutant turtles are here in your hands to give you the chance to end the mission the best way possible',
   price: 36,
   category: 'Adventure',
@@ -389,7 +389,7 @@ game_21.photo.attach(io: file, filename: 'movie.jpg', content_type: 'image/jpg')
 game_21.save!
 
 game_22 = Game.new(
-  name: 'Fantasy Flight Games Lord of the Rings',
+  name: 'Fantasy Flight Games: Lord of the Rings',
   description: "A fully-cooperative, Science-Fiction app-supported board game set in J.R.R. Tolkien’s iconic Middle-earth for one to five players",
   price: 35,
   category: 'Role',
@@ -439,7 +439,7 @@ game_24.save!
 
 
 game_25 = Game.new(
-  name: 'Paladone Play That Tune - Music Trivia Game with Kazoos',
+  name: 'Paladone: Music Trivia Game with Kazoos',
   description: "C'mon and join this hilarious guessing game that will test everyone's knowledge of catchy iconic tunes as well as their ability to play the kazoo! It's a laugh-out-loud game for the whole family.",
   price: 5,
   category: 'Music',
@@ -457,7 +457,7 @@ game_25.save!
 puts "25 games created!"
 
 game_26 = Game.new(
-  name: 'Sagrada Familia Adult Puzzle Jigsaw 1000 Pieces Puzzle',
+  name: 'Sagrada Familia Jigsaw Puzzle',
   description: "Jigsaw puzzle 1000 piece:Thrill and challenge your family and friends piecing together this incredible 1000-Piece jigsaw puzzle. Bring home hours of fun and entertainment everyone will enjoy.",
   price: 2,
   category: 'Puzzle',
