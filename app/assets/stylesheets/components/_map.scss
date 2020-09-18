@@ -24,11 +24,8 @@
   filter: invert(28%) sepia(13%) saturate(6800%) hue-rotate(317deg) brightness(110%) contrast(100%);
 }
 
-.index-map{
-  top: 61px;
-  height: 93vh !important;
+.index-map{ top: 61px; }
 
-}
 .show-map{ border-radius: 0px 0px 20px 20px; }
 
 .mapboxgl-popup-close-button { color: white; }

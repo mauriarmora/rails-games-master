@@ -6,7 +6,7 @@
         <%= f.input :name, input_html: { class: 'special', placeholder: 'Jumanji' }, label_html: { class: 'not-special'} %>
         <div class="row">
           <div class="col-4">
-            <%= f.input :price, input_html: { class: 'special', placeholder: "Don't go too high!" }, label_html: { class: 'not-special'} %>
+            <%= f.input :price, input_html: { class: 'special', placeholder: "5€" }, label_html: { class: 'not-special'} %>
           </div>
           <div class="col-8">
             <%= f.input :category, collection: Game::CATEGORIES, input_html: { class: 'special' }, label_html: { class: 'not-special' } %>
