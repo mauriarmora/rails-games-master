@@ -26,6 +26,7 @@
 .notification p {
   margin: 0;
   line-height: 1.4;
+  font-weight: normal;
 }
 
 .notification small {
@@ -37,7 +38,7 @@ p .user-request {
 }
 
 .notification .notification-actions {
-  opacity: 0;
+  opacity: 1;
   display: flex;
   transition: ease .1s;
 }
@@ -46,15 +47,8 @@ p .user-request {
   display: flex;
   opacity: 1;
   color: #999999;
-
-  &:hover {
-    color: #555555;
-  }
 }
 
-.notification:hover .notification-actions {
-  opacity: 1;
-}
 
 .notification .notification-actions {
   color: #999999;
