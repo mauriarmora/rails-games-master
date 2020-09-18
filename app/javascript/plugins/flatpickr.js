@@ -1,11 +1,11 @@
 import flatpickr from "flatpickr";
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 
-const startRange = document.querySelector("#range_start");
-const endRange = document.querySelector("#range_end");
-const priceNight = document.querySelector("#price-night");
 
 const computeTotalPrice = (event) => {
+  const startRange = document.querySelector("#range_start");
+  const endRange = document.querySelector("#range_end");
+  const priceNight = document.querySelector("#price-night");
   console.log("hi!");
   const totalPriceTag = document.querySelector("#total-price");
   const startDate = new Date(startRange.value.split(" to ")[0]);
