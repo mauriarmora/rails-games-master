@@ -30,3 +30,19 @@
 .btn-dashboard:hover {
   border-bottom: 1px solid black;
 }
+
+@media (max-width: 576px) {
+  .form-input {
+    width: 250px;
+  }
+  .navbar { padding: 0.5rem 0rem; }
+
+}
+
+@media (max-width: 450px) {
+  .form-input { width: 200px; }
+}
+
+@media (max-width: 340px) {
+  .form-input { width: 180px;}
+}
