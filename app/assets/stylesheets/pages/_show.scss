@@ -38,6 +38,12 @@
   font-weight: bolder;
   text-align: center;
   border-radius: 20px;
+  &:hover {
+    background-color: #ac2a42;
+    color: white !important;
+    border-radius: 20px;
+    transition-duration: 0.15s !important;
+  }
 }
 
 .description-header {
@@ -53,7 +59,7 @@
 }
 
 .btn {
-  color: white;
+  color: white !important;
   width: 100%;
 }
 
