@@ -36,7 +36,7 @@
     </div>
 
       <div class="booking-card">
-        <h4><strong><%= @game.price %>€</strong>/night </h4>
+        <h4 id="price-night" data-price="<%= @game.price %>"><strong><%= @game.price %>€</strong>/night </h4>
 
         <%= simple_form_for([@game, @booking]) do |f| %>
           <%= f.error_notification %>
@@ -44,13 +44,14 @@
 
             <%= f.input :start_date, as: :string, required: true, input_html: {id: "range_start", class: ""} %>
             <%= f.input :end_date, as: :string, required: true, input_html: {id: "range_end", class: ""} %>
-
-          <div class="booking-submit">
-            <%= f.button :submit%>
-          </div>
-
+            <p>Total price: € <span id="total-price"></span></p>
+            <div class="booking-submit">
+             <%= f.button :submit%>
+            </div>
         <% end %>
       </div>
+
+
   </div> <!---- closing flex div ------>
 
 </div> <!---- closing container ------>

@@ -39,3 +39,4 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 });
 
+
