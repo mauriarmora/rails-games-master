@@ -1,5 +1,3 @@
-// Specific CSS for your home-page
-
 .banner {
   background-image: linear-gradient(90deg, rgba(2,0,22,0.5) 0%, rgba(0,0,0,0.365983893557423) 100%), url("https://images.unsplash.com/photo-1536743939714-23ec5ac2dbae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2874&q=80");
   background-size: cover;
@@ -25,27 +23,6 @@
 
 .top-games-title, .categories-title {
   font-weight: bold; }
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
-  padding: 20px;
-}
-
-@media (max-width: 800px) {
-  /* For a screen < 720px, this CSS will be read */
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
 
 .category-card {
   background: white;
@@ -110,5 +87,38 @@
     background-color: #ac2a42 !important;
     color: white;
     transition-duration: 0.1s !important;
+  }
+}
+
+// GRID
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  padding: 20px;
+}
+
+
+// RESPONSIVENESS HOME PAGE
+
+@media (max-width: 990px) {
+  /* For a screen < 720px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 765px) {
+  /* For a screen < 720px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 539px) {
+  /* For a screen < 720px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
