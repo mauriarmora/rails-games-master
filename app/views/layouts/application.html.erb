@@ -23,20 +23,20 @@
               <button type="submit" class="btn-form">
                 <i class="fas fa-search"></i>
               </button>
-              <%#= submit_tag '.html_safe, class: "btn-form" %>
           <% end %>
         </div>
 
         <div class="avatar">
           <div class="dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, alt: "avatar" %>
-            <div class="dropdown-menu dropdown-menu-right text-center navbar-dropdown" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
               <% if user_signed_in? %>
-                <%= link_to "Dashboard", dashboard_path, class: "btn logout" %>
-                <%= link_to "Logout", destroy_user_session_path, class: "btn logout", method: :delete %>
+                <%= link_to "Post a game", new_game_path, class: "btn btn-dropdown" %>
+                <%= link_to "Dashboard", dashboard_path, class: "btn btn-dropdown" %>
+                <%= link_to "Logout", destroy_user_session_path, class: "btn btn-dropdown logout", method: :delete %>
               <% else %>
                 <%= link_to "Login", new_user_session_path, class: "btn login" %>
-                <%= link_to "Sign up", new_user_registration_path, class: "btn sign-up" %>
+                <%= link_to "Sign up", new_user_registration_path, class: "btn btn-dropdown" %>
               <% end %>
             </div>
           </div>

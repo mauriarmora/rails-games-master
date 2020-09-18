@@ -1,26 +1,30 @@
-.logout {
+.btn-dropdown {
   color: rgba(0,0,0,0.8) !important;
-  padding-top: 14px;
-  &:hover { border-bottom: 1px solid black; }
-}
-
-.navbar-dropdown {
-  border-radius: 7px;
-  padding: 30px;
-}
-
-.login {
-  background: #FF385D;
-  color: white;
-  border-radius: 20px;
-  padding: 10px 40px;
+  font-size: 15px;
+  padding: 10px 0;
   &:hover {
-    background: #ac2a42;
-    color: white;
+    background-color: #FF385D;
+    color: white !important;
   }
 }
 
-.sign-up {
+.dropdown-menu {
+  border-radius: 7px;
+  width: 12rem !important;
+  padding: 15px 0;
+}
+
+.login {
+  font-weight: bold;
   color: rgba(0,0,0,0.8) !important;
-  &:hover { border-bottom: 1px solid black; }
+  padding: 10px 0;
+  &:hover {
+    background-color: #FF385D;
+    color: white !important;
+  }
+}
+
+.logout {
+  border-bottom: none;
+  font-weight: bold;
 }
