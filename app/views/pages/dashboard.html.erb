@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="my-4">Dashboard</h2>
 
-      <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
         <a class="nav-link active nav-active" id="pills-home-tab" data-toggle="pill" href="#pills-requests" role="tab" aria-controls="pills-home" aria-selected="true">Requests</a>
       </li>
@@ -15,32 +15,31 @@
       <!---- REQUESTED BOOKINGS (FROM OTHER USERS) ---->
         <div class="notifications">
           <% @requested_bookings.each do |booking| %>
-            <div class="notification">
-              <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-              <div class="notification-content">
-                <h6 class="mb-1"><strong><%= link_to booking.game.name, game_path(booking.game) %></strong></h6>
-                <p><small class="user-request"><strong>Request from:</strong> <%= booking.user.first_name %> <%= booking.user.last_name %></small></p>
-                <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
-                <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
-              </div>
-              <div class="notification-actions justify-content-center align-items-center">
-                <div class="booking-status d-flex">
-                  <% if booking.status == "pending" %>
-                    <%= link_to booking_accept_path(booking), class: "d-flex align-items-center" do  %>
-                      <i class="fas fa-check-circle"></i>
-                      <p class="mr-4 ml-1 accept">Accept</p>
+              <div class="notification">
+                <%= cl_image_tag booking.game.photo.key, class: 'avatar-notification'%>
+                <%= link_to game_path(booking.game), class: 'notification-content' do %>
+                    <h6 class="mb-1"><strong><%= booking.game.name %></strong></h6>
+                    <p><small class="user-request"><strong>Request from:</strong> <%= booking.user.first_name %> <%= booking.user.last_name %></small></p>
+                    <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
+                    <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
+                <% end %>
+                <div class="notification-actions justify-content-center align-items-center">
+                  <div class="booking-status d-flex">
+                    <% if booking.status == "pending" %>
+                      <%= link_to booking_accept_path(booking), class: "d-flex align-items-center" do  %>
+                        <i class="fas fa-check-circle"></i>
+                        <p class="mr-4 ml-1 accept">Accept</p>
+                      <% end %>
+                      <%= link_to booking_decline_path(booking), class: "d-flex align-items-center" do %>
+                        <i class="fas fa-minus-circle"></i>
+                        <p class="mr-2 ml-1 decline">Decline</p>
+                      <% end %>
+                    <% else %>
+                      <p class="mr-2"><%= booking.status.capitalize %></p>
                     <% end %>
-
-                    <%= link_to booking_decline_path(booking), class: "d-flex align-items-center" do %>
-                    <i class="fas fa-minus-circle"></i>
-                    <p class="mr-2 ml-1 decline">Decline</p>
-                    <% end %>
-                  <% else %>
-                    <p class="mr-2"><%= booking.status.capitalize %></p>
-                  <% end %>
+                  </div>
                 </div>
               </div>
-            </div>
           <% end %>
         </div>
       </div>
@@ -48,27 +47,29 @@
       <div class="tab-pane fade" id="pills-bookings" role="tabpanel" aria-labelledby="pills-profile-tab">
         <div class="notifications">
           <% @bookings.each do |booking| %>
-            <div class="notification">
-              <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-              <div class="notification-content">
-                <h6 class="mb-1"><strong><%= link_to booking.game.name, game_path(booking.game.id) %></strong></h6>
-                <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
-                <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
-              </div>
+            <%= link_to game_path(booking.game) do %>
+              <div class="notification">
+                  <%= cl_image_tag booking.game.photo.key, class: 'avatar-notification'%>
+                <div class="notification-content">
+                  <h6 class="mb-1"><strong><%= booking.game.name %></strong></h6>
+                  <p><small> <strong>Start date:</strong> <%= booking.start_date %></small></p>
+                  <p><small> <strong>End date:</strong> <%= booking.end_date %></small></p>
+                </div>
 
-              <div class="notification-actions-bookings align-items-center">
-                <% if booking.status == "accepted" %>
-                  <i class="fas fa-check-circle text-success"></i>
-                  <small><p class="ml-1 text-success"> <%= booking.status.capitalize %>!</p></small>
-                <% elsif booking.status == "declined" %>
-                  <i class="fas fa-minus-circle text-danger"></i>
-                  <small><p class="ml-1 text-danger"><%= booking.status.capitalize %></p></small>
-                <% else %>
-                  <i class="fas fa-clock mr-1 pending-status"></i>
-                  <small><p class="pending-status"><%= booking.status.capitalize %></p></small>
-                <% end %>
+                <div class="notification-actions-bookings align-items-center">
+                  <% if booking.status == "accepted" %>
+                    <i class="fas fa-check-circle text-success"></i>
+                    <small><p class="ml-1 text-success"> <%= booking.status.capitalize %>!</p></small>
+                  <% elsif booking.status == "declined" %>
+                    <i class="fas fa-minus-circle text-danger"></i>
+                    <small><p class="ml-1 text-danger"><%= booking.status.capitalize %></p></small>
+                  <% else %>
+                    <i class="fas fa-clock mr-1 pending-status"></i>
+                    <small><p class="pending-status"><%= booking.status.capitalize %></p></small>
+                  <% end %>
+                </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
         </div>
       </div>

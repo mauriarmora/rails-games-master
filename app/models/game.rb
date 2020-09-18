@@ -6,8 +6,6 @@ class Game < ApplicationRecord
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
-
-
   CATEGORIES = ['Adventure', 'Abstract', 'Betting', 'Card', 'Children', 'Classic', 'Collaborative', 'Fantasy', 'Movies/TV', 'Music', 'Party', 'Puzzle', 'Role', 'Science-Fiction', 'Strategy', 'Trivia'].freeze
   CONDITION = ['Excellent', 'Good', 'Playable'].freeze
 
