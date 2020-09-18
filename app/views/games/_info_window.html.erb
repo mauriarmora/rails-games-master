@@ -1,7 +1,8 @@
-
 <div class="popup-map">
-  <h5><%= link_to "#{game.name}", game_path(game.id) %></h5>
-  <p><%= link_to "#{game.location}", game_path(game.id) %></p>
+    <div class="card-map-flex">
+      <h5><%= link_to "#{game.name}", game_path(game.id) %></h5>
+      <h5><%= link_to "#{game.price}€/day", game_path(game.id) %></h5>
+    </div>
+    <p><%= link_to "#{game.location}", game_path(game.id) %></p>
+  <%= cl_image_tag game.photo.key, height: 150, width: 200, crop: :scale %>
 </div>
-
-

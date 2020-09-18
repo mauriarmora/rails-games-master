@@ -6,6 +6,13 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  img {
+    border-radius: 7px;
+    width: 100%;
+  }
 }
 
 #map {
@@ -22,6 +29,11 @@
   height: 93vh !important;
 
 }
-.show-map{
-  border-radius: 0px 0px 20px 20px;
+.show-map{ border-radius: 0px 0px 20px 20px; }
+
+.mapboxgl-popup-close-button { color: white; }
+
+.card-map-flex {
+  display: flex;
+  justify-content: space-between;
 }
