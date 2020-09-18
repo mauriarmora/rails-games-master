@@ -65,3 +65,25 @@
   font-weight: bolder;
 }
 
+.info-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 500px) {
+  .info-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .booking-card {
+    position: relative;
+    top: 0px;
+    margin-bottom: 8px;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .wrapper-left {
+    width: 100%;
+  }
+}

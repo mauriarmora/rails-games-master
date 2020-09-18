@@ -8,7 +8,7 @@
   <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :scale, class:'banner-show'  %>
 
 
-  <div class="big-wrapper d-flex align-items-start mt-3 mb-5">
+  <div class="info-wrapper mt-3 mb-5">
 
     <div class="wrapper-left p-0">
       <div class="description-header d-flex p-3">
@@ -19,9 +19,9 @@
       </div>
         <div class="game-details p-3 mb-5">
           <p><strong>Category:</strong> <%= @game.category %></p>
-          <p><strong>Age:</strong>  from <%= @game.age %> years-old.</p>
+          <p><strong>Age:</strong>  <%= @game.age %>+ years-old.</p>
           <p><strong>Players:</strong>  <%= @game.number_of_players %></p>
-          <p><strong>Duration:</strong>  <%= @game.game_time %></p>
+          <p><strong>Duration:</strong>  <%= @game.game_time %> mins</p>
           <p><strong>Condition:</strong>  <%= @game.condition %></p>
           <br />
           <p><strong>Description:</strong>  <%= @game.description %></p>
