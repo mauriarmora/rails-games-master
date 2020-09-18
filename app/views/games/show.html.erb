@@ -8,7 +8,7 @@
   <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :scale, class:'banner-show'  %>
 
 
-  <div class="d-flex align-items-start mt-3 mb-5">
+  <div class="big-wrapper d-flex align-items-start mt-3 mb-5">
 
     <div class="wrapper-left p-0">
       <div class="description-header d-flex p-3">
@@ -36,7 +36,7 @@
     </div>
 
       <div class="booking-card">
-        <h4 id="price-night" data-price="<%= @game.price %>"><strong><%= @game.price %>€</strong>/night </h4>
+        <h4 id="price-night" data-price="<%= @game.price %>"><strong>€<%= @game.price %></strong>/day </h4>
 
         <%= simple_form_for([@game, @booking]) do |f| %>
           <%= f.error_notification %>
@@ -44,7 +44,7 @@
 
             <%= f.input :start_date, as: :string, required: true, input_html: {id: "range_start", class: ""} %>
             <%= f.input :end_date, as: :string, required: true, input_html: {id: "range_end", class: ""} %>
-            <p>Total price: € <span id="total-price"></span></p>
+            <h5 class="mt-4 mb-4"=><strong>Total price:</strong> € <span id="total-price"></span></h5>
             <div class="booking-submit">
              <%= f.button :submit%>
             </div>
